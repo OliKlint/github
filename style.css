@@ -23,3 +23,25 @@ li a {
 li a:hover {
   background-color: #D63333;
 }
+
+hr{
+  border: 1px solid #D63333;
+}
+
+.wrapper {
+  background-color: deeppink;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-template-areas:
+  "nav nav nav nav"
+  "header header header  header"
+  ". logo logo ."
+}
+
+.header {
+  grid-area: header;
+}
+
+.logo {
+  grid-area: logo;
+  background-color: red;
+}
