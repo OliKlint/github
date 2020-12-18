@@ -633,3 +633,56 @@ img {
     "footer";
   }
 }
+
+@keyframes play {
+    0% {background-position: 0px; }
+    100% {background-position: -4000px;}
+}
+
+.stickanimation {
+	background: url(stickanimation.png) 0 0 no-repeat;
+	width: 500px;
+  height: 500px;
+    animation: play 1s steps(8) infinite alternate;
+  grid-area: animation;
+  margin-left: 33%;
+}
+
+@media (min-width: 1024px) {
+  .animationwrapper {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "menu menu menu menu menu menu menu menu menu menu menu menu menu menu"
+    "h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1"
+    ". . . . . . animation animation . . . . . ."
+    "footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+  }
+}
+
+@media (min-width: 828px){
+  .animationwrapper {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "menu menu menu menu menu"
+    "h1 h1 h1 h1 h1"
+    ". . animation . ."
+    "footer footer footer footer footer";
+  }
+}
+
+@media (min-width: 414px){
+  .animationwrapper {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "menu"
+    "h1"
+    "animation"
+    "footer";
+  }
+}
